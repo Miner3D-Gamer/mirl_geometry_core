@@ -4,14 +4,14 @@
 // #[must_use]
 // pub fn direction_rect_to_rect<
 //     T: Copy
-//         + mirl_extensions::ConstOne
+//         + mirl_extensions::One
 //         + core::ops::Add<Output = T>
 //         + core::ops::Div<Output = T>
 //         + ConstNumbers128
 //         + core::cmp::PartialOrd
 //         + core::ops::Sub<Output = T>
 //         + core::ops::Mul<Output = T>
-//         + mirl_extensions::ConstZero
+//         + mirl_extensions::Zero
 //         + mirl_extensions::Abs,
 //     const CS: bool,
 // >(

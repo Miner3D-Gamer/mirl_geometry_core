@@ -19,8 +19,8 @@ pub const trait RotateDirectionsHelper: Sized {
     /// Rotate the direction 270° counterclockwise (or 90° clockwise)
     fn rotate_counterclockwise_270(&self) -> Self;
 }
-impl<T: [const] RotateDirections + [const] core::marker::Destruct> const
-    RotateDirectionsHelper for T
+const impl<T: [const] RotateDirections + [const] core::marker::Destruct> RotateDirectionsHelper
+    for T
 {
     /// Rotate the direction 180°
     fn rotate_180(&self) -> Self {
@@ -54,16 +54,15 @@ pub const trait RotatePreciseHelper: [const] RotateDirections {
     /// Rotate the direction 135° counterclockwise (90° + 45°)
     fn rotate_counterclockwise_135(&self) -> Self;
 }
-impl<T: [const] RotatePrecise + [const] core::marker::Destruct> const
-    RotatePreciseHelper for T
-{
+const impl<T: [const] RotatePrecise + [const] core::marker::Destruct> RotatePreciseHelper for T {
     /// Rotate the direction 135° clockwise (90° + 45°)
     fn rotate_clockwise_135(&self) -> Self {
         self.rotate_clockwise_90().rotate_clockwise_45()
     }
     /// Rotate the direction 135° counterclockwise (90° + 45°)
     fn rotate_counterclockwise_135(&self) -> Self {
-        self.rotate_counterclockwise_90().rotate_counterclockwise_45()
+        self.rotate_counterclockwise_90()
+            .rotate_counterclockwise_45()
     }
 }
 

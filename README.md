@@ -35,7 +35,7 @@
 Define a few core structs that can be used elsewhere
 
 ### Disclaimer
-This crate is barebone. For a more complete implementation; use [Mirl Geometry](https://github.com/Miner3D-Gamer/mirl_geometry)
+This crate is bare bone. For a more complete implementation; use [Mirl Geometry](https://github.com/Miner3D-Gamer/mirl_geometry)
 
 ### Origin
 Both [Mirl Geometry](https://github.com/Miner3D-Gamer/mirl_geometry) and [Mirl Extensions](https://github.com/Miner3D-Gamer/mirl_Extensions) require items from this crate so as to avoid dependency conflicts, this lib has been created

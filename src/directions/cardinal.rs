@@ -9,30 +9,22 @@ pub enum AllCardinalDirections {
     /// NE SE SW NW
     Extended(ExtendedDirections),
 }
-impl const RotateDirections for AllCardinalDirections {
+const impl RotateDirections for AllCardinalDirections {
     fn rotate_clockwise_90(&self) -> Self {
         match self {
-            Self::Base(direction) => {
-                Self::Base(direction.rotate_clockwise_90())
-            }
-            Self::Extended(direction) => {
-                Self::Extended(direction.rotate_clockwise_90())
-            }
+            Self::Base(direction) => Self::Base(direction.rotate_clockwise_90()),
+            Self::Extended(direction) => Self::Extended(direction.rotate_clockwise_90()),
         }
     }
     fn rotate_counterclockwise_90(&self) -> Self {
         match self {
-            Self::Base(direction) => {
-                Self::Base(direction.rotate_counterclockwise_90())
-            }
-            Self::Extended(direction) => {
-                Self::Extended(direction.rotate_counterclockwise_90())
-            }
+            Self::Base(direction) => Self::Base(direction.rotate_counterclockwise_90()),
+            Self::Extended(direction) => Self::Extended(direction.rotate_counterclockwise_90()),
         }
     }
 }
 
-impl const RotatePrecise for AllCardinalDirections {
+const impl RotatePrecise for AllCardinalDirections {
     fn rotate_clockwise_45(&self) -> Self {
         match self {
             Self::Base(direction) => Self::Extended(match direction {

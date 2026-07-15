@@ -1,5 +1,3 @@
-
-
 // /// Get the relative direction from the target to the current [`Rectangle`](crate::math::collision::Rectangle)
 // #[must_use]
 // pub fn direction_rect_to_rect<

@@ -11,7 +11,7 @@ pub enum ExtendedDirections {
     SouthWest,
     NorthWest,
 }
-impl const RotateDirections for ExtendedDirections {
+const impl RotateDirections for ExtendedDirections {
     fn rotate_clockwise_90(&self) -> Self {
         match self {
             Self::NorthEast => Self::SouthEast,

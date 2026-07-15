@@ -23,7 +23,7 @@ pub enum Directions {
     West,
 }
 
-impl const RotateDirections for Directions {
+const impl RotateDirections for Directions {
     fn rotate_clockwise_90(&self) -> Self {
         match self {
             Self::North => Self::East,

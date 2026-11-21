@@ -1,9 +1,8 @@
 use super::{Directions, ExtendedDirections, RotateDirections, RotatePrecise, SpecialDirections};
 
-#[cfg_attr(feature = "mirl_derive", mirl_derive::derive_all(wincode = false))]
+#[mirl_macros::derive_all(wincode = false)]
 // overly complex generic constant consider moving this anonymous constant into a `const` function this operation may be supported in the future
 /// N E S W + NE SE SW NW + None
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord)]
 pub enum AllDirections {
     /// N E S W
     Base(Directions),

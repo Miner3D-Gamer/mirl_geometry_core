@@ -6,6 +6,7 @@
 #![feature(const_cmp)]
 #![feature(const_ops)]
 #![feature(const_convert)]
+#![feature(const_default)]
 
 /// Directional stuff -> NESW, N NE E SE S SW W NW
 pub mod directions;

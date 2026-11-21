@@ -1,8 +1,7 @@
 use super::{Directions, ExtendedDirections, RotateDirections, RotatePrecise};
 
 /// N E S W + NE SE SW NW
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord)]
-#[cfg_attr(feature = "mirl_derive", mirl_derive::derive_all(wincode = false))]
+#[mirl_macros::derive_all(wincode = false)]
 pub enum AllCardinalDirections {
     /// N E S W
     Base(Directions),

@@ -1,7 +1,4 @@
-#[cfg_attr(feature = "mirl_derive", mirl_derive::derive_all)]
-#[allow(clippy::derived_hash_with_manual_eq)] // It is manually derived for the const tag.
-#[derive_const(Clone, Eq, PartialEq)]
-#[derive(Debug, Copy, Hash)]
+#[mirl_macros::derive_all(partial_ord = false)]
 /// A 2d position in a text context
 pub struct TextPosition {
     /// Vertical

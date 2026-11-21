@@ -1,8 +1,7 @@
 use super::{Directions, RotateDirections, SpecialDirections};
 
 /// N E S W + None
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord)]
-#[cfg_attr(feature = "mirl_derive", mirl_derive::derive_all(wincode = false))]
+#[mirl_macros::derive_all(wincode = false)]
 pub enum DirectionsWithNone {
     /// N E S W
     Base(Directions),

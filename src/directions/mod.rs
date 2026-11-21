@@ -83,9 +83,8 @@ pub use special::*;
 /// Functions that are somewhat related to directions yet do not have direct relation to it
 pub mod misc;
 
-#[cfg_attr(feature = "mirl_derive", mirl_derive::derive_all)]
+#[mirl_macros::derive_all(default = true)]
 #[allow(clippy::struct_excessive_bools, missing_docs)]
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Default, Hash)]
 /// A boolean for each simple Direction
 pub struct NormalDirections {
     pub top: bool,

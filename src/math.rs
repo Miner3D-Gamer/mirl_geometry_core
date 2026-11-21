@@ -1,7 +1,6 @@
-//! Mathe relate stuff
+//! Math relate stuff
 
-#[cfg_attr(feature = "mirl_derive", mirl_derive::derive_all(compactly = false))]
-#[derive(Debug, Clone, Copy)]
+#[mirl_macros::derive_all(compactly = false, clone = nonconst, ord = nonconst, partial_ord = nonconst, eq = nonconst, partial_eq = nonconst)]
 /// Convert from one ratio to another
 pub struct RatioConverter2D<T: Into<F>, F: Into<T> + Copy> {
     ratio: (F, F),

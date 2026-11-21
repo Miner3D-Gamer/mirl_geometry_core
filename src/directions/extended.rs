@@ -1,8 +1,7 @@
 use super::RotateDirections;
 
-#[cfg_attr(feature = "mirl_derive", mirl_derive::derive_all(wincode = false))]
+#[mirl_macros::derive_all(wincode = false, default = true)]
 /// NE SE SW NW
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord, Default)]
 #[allow(missing_docs)]
 pub enum ExtendedDirections {
     #[default]

@@ -1,8 +1,7 @@
 use super::RotateDirections;
 
-#[cfg_attr(feature = "mirl_derive", mirl_derive::derive_all(wincode = false))]
+#[mirl_macros::derive_all(wincode = false, default = true)]
 /// N E S W
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Default, Hash, PartialOrd, Ord)]
 pub enum Directions {
     #[default]
     /// Up
